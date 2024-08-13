@@ -230,10 +230,22 @@ $(function () {
     foScrollTriggers();
     pceScrollTriggers();
     memScrollTriggers();
-
+     resetOverviewTxt()
   })
 
+  function resetOverviewTxt(){
+    chkMedia();
+    if (mVert || mHorz || tablet){
+      $(".overview").show();
+    } else {
+      $(".overview").hide();
+    }
+  }
 
+
+  function overviewTxtBlock(){
+    
+  }
 
   //메인뷰(pc) : mouseenter 애니메이션
   let curMainView = null;
@@ -245,6 +257,7 @@ $(function () {
     let wImg = $(".wImg");
     wImg.height(wImg.parent().height());
     wImg.css({ "z-index": 9 });
+    winW = $(window).width();
     let idx = Math.floor(ev.pageX / winW * 5);
 
     //새로 다른 이미지로 옮겼을 때 애니메이션 시작 시작
@@ -253,7 +266,8 @@ $(function () {
       curMainView = idx;
       hoverActive = true;
       $(".descBox").stop(true, false).hide(); // 모든 descBox 숨김
-      slides.find('.overview').css({ "display": "none" });
+      // slides.find('.overview').css({ "display": "none" });
+      slides.find('.overview').hide();
       slides.each((i, slide) => {
         if (idx == i) {
           setTimeout(function () {
@@ -608,3 +622,4 @@ $(function () {
   
 
 }) // $(function(){ }) END
+
