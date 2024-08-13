@@ -1,0 +1,1591 @@
+/********************************** 공통 **********************************/
+/********************************** 공통 **********************************/
+/********************************** 공통 **********************************/
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary: #9c836a;
+  --color-secondary: #857b71;
+  --color-border: #f4f2ef;
+  --color-666: #666;
+  --color-third: #000000b3;
+  --color-333: #333;
+  --color-111: #111;
+  --color-ddd: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  color: #666666;
+  /* border: 1px solid #e6e3df; */
+  /* background-color: #f7f7f7; */
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 12px;
+  color: var(--color-111);
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  overflow-x: hidden;
+}
+
+ol li,
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header,
+section.contents section.overview {
+  text-transform: uppercase;
+  width: 100vw;
+}
+
+span.nowrap {
+  white-space: nowrap;
+}
+
+/* display:none */
+.dn {
+  display: none !important;
+}
+
+/* .card {
+  cursor: pointer;
+} */
+
+/* 글자색 : 메인컬러 */
+.c-pr {
+  color: var(--color-primary);
+}
+
+.pr {
+  color: #9c836a;
+}
+
+select option {
+  color: #161411;
+}
+
+body>.container {
+  margin-top: 109px;
+}
+
+/* small태그 + 빨간글씨 */
+small.sm-red {
+  color: red;
+  font-size: 10px;
+}
+
+/* small태그 + 연회색글씨 */
+small.sm-999 {
+  color: #999;
+  font-size: 10px;
+  padding-top: 10px;
+  display: block;
+  word-break: keep-all;
+}
+
+.loCase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* 기본 사각 버튼 : 모바일 사이즈 display:none */
+a.solidBtn {
+  display: none;
+}
+
+/* 단어 단위로 줄 바꾸기 */
+.noWordBrk {
+  word-break: keep-all;
+}
+
+/***************************** 세로폰 : 헤더스타일 *****************************/
+/***************************** 세로폰 : 헤더스타일 *****************************/
+/***************************** 세로폰 : 헤더스타일 *****************************/
+header {
+  color: white;
+  /* overflow: hidden; */
+  position: fixed;
+  z-index: 99;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.subBar {
+  width: 100%;
+  position: fixed;
+  padding: 10px auto;
+
+  color: var(--color-text);
+
+  top: 0;
+  z-index: 99;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.subBar h2.category {
+  /* display: inline-block; */
+  /* margin: 0 auto; */
+  /* display: block; */
+  height: 60px;
+  padding: 21px auto 17px;
+  align-self: stretch;
+  text-align: center;
+  background-color: #fff;
+
+  /* background-color: rgba(100, 0, 0, 0.3); */
+}
+
+.subBar h2.category a {
+  font-size: 17px;
+  /* width: 100%; height: 100%; */
+  display: inline-block;
+  line-height: 60px;
+  color: #333;
+}
+
+.subBar .right {
+  position: absolute;
+  top: 21px;
+  right: 16px;
+  display: flex;
+  align-self: center;
+}
+
+/* .subBar .right>* {
+  margin-right: 15px;
+} */
+.subBar .right .menuBtn {
+  width: 18px;
+  height: 17px;
+  background: url('../resource/img/btn_menu.png') no-repeat center center/contain;
+  /* margin-left: ; */
+  cursor: pointer;
+}
+
+/* .subBar .right i.fa-bars{
+  cursor: pointer;
+} */
+
+.subBar select {
+  background-color: transparent;
+  /* 배경을 완전히 투명하게 설정 */
+  border: none;
+  /* 경계를 완전히 투명하게 설정 */
+  color: white;
+  /* 글자 색상을 흰색으로 설정 */
+  outline: none;
+  /* 포커스 시 나타나는 기본 테두리 제거 */
+  cursor: pointer;
+}
+
+.subBar ul.lnb {
+  color: #333;
+  height: 33px;
+  position: fixed;
+  height: 33px;
+  left: 0;
+  top: 60px;
+  max-width: 100%;
+  background: #fff;
+  z-index: 10;
+  overflow-x: scroll;
+  display: flex;
+  -ms-overflow-style: none;
+  padding-left: 16px;
+  min-width: 100%;
+
+}
+
+.subBar ul.lnb::after {
+  content: "";
+  position: fixed;
+  /* bottom: 2px; */
+  top: 92px;
+  /* 밑줄을 패딩 하단에 배치 */
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-ddd);
+  box-sizing: border-box;
+}
+
+
+.subBar ul.lnb::-webkit-scrollbar {
+  display: none;
+}
+
+.subBar ul.lnb li a {
+  padding-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 0.56px;
+  line-height: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.subBar ul.lnb li {
+  padding-bottom: 12px;
+  margin-right: 16px;
+  position: relative;
+}
+
+.subBar ul.lnb li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  /* 밑줄을 패딩 하단에 배치 */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  box-sizing: border-box;
+}
+
+.subBar ul.lnb li.active a {
+  color: var(--color-primary)
+}
+
+.mMenu {
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-text);
+  text-transform: uppercase;
+  color: white;
+  /* overflow: hidden; */
+  /* display: none; */
+  left: 100%;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-flow: row wrap;
+  transition: left 0.5s cubic-bezier(.55, .59, .27, .97);
+
+}
+
+
+
+.mMenu li {
+  cursor: pointer;
+}
+
+.mMenu.on {
+  left: 0;
+  z-index: 99999999;
+}
+
+
+.mMenu a:visited,
+.mMenu a:default,
+.mMenu ul.snb li a {
+  color: white !important;
+}
+
+
+.mMenu>.upper {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: RGBa(22, 20, 17);
+  width: 100%;
+}
+
+
+.mMenu>.upper>.top {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+
+  color: white;
+  /* position: fixed; */
+  top: 0;
+  z-index: 99;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.8s;
+
+}
+
+
+
+.mMenu>.upper>.top>h1 {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-style: normal;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  display: flex;
+  align-self: center;
+  margin-left: 15px;
+}
+
+.mMenu>.upper>.top>h1>a {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  text-decoration: none;
+  display: inline-block;
+  width: 126.46875px;
+  height: 19px;
+  background: url('../resource/img/main_logo2.png');
+  background-size: cover;
+}
+
+
+.mMenu>.upper>.top>.closeBtn {
+  background: url("../resource/img/btn_pop_close.png") no-repeat center;
+  /* background-size: 18px; */
+  width: 18px;
+  height: 17px;
+  /* padding: 11px; */
+  box-sizing: border-box;
+  /* float: right; */
+  margin-right: 15px;
+  cursor: pointer;
+  display: block;
+}
+
+.mMenu>.upper>ul.snb {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.mMenu>.upper>ul.snb,
+.mMenu>.contact>ul {
+  height: 46px;
+  display: flex;
+}
+
+.mMenu>.upper>ul.snb>li,
+.mMenu>.contact>ul>li {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.mMenu>.contact>ul>li {
+  width: 50%;
+}
+
+.mMenu>.upper>ul.snb>li:not(:last-child)::after,
+.mMenu>.contact>ul>li:not(:last-child)::after {
+  content: " ";
+  border-right: 1px solid rgb(51, 51, 51);
+  width: 1px;
+  height: 30%;
+}
+
+.mMenu>.upper>ul.snb>li>a,
+.mMenu>.contact>ul>li>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 46px;
+}
+
+.mMenu>.contact>ul>li>a span.email::before,
+.mMenu>.contact>ul>li>a span.tel::before {
+  content: " ";
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mMenu>.contact>ul>li>a span.email::before {
+  background: url(../resource/img/icon_mail.png) no-repeat center/contain;
+}
+
+.mMenu>.contact>ul>li>a span.tel::before {
+  background: url(../resource/img/icon_tel.png) no-repeat center/contain;
+}
+
+
+
+/** gnb **/
+.mMenu>nav.gnb {
+  width: 100%;
+  height: calc(100vh - 96px);
+  overflow: scroll;
+  background: RGBa(30, 28, 25);
+
+}
+
+
+.mMenu>nav.gnb>ul {
+  width: 50%;
+  height: 100%;
+  background-color: RGBa(30, 28, 25);
+  /* position: relative; */
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+
+.mMenu>nav.gnb>ul>li {
+  padding: 30px 0px 0px 20px;
+  /* width: 100%; */
+}
+.mMenu>nav.gnb>ul>li:active,
+.mMenu>nav.gnb>ul>li:focus{
+  background-color : transparent;
+  
+}
+
+.mMenu>nav.gnb>ul>li.active {
+  color: var(--color-primary)
+}
+
+.mMenu>nav.gnb>ul>li.active::after {
+  content: "  »";
+  margin-left: 5px;
+}
+
+
+.mMenu>nav.gnb>ul>li.active>ul.lnb {
+  display: block;
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  /* margin-left: 50%; */
+  overflow-y: scroll;
+  width: 50%;
+  background-color: rgba(39, 37, 34);
+  /* min-height: 100%; */
+  min-height: 100%;
+  /* float: right; */
+
+}
+
+.mMenu>nav.gnb>ul>li.active>ul.lnb>li {
+  padding: 30px 0px 0px 20px;
+}
+
+.mMenu>.contact>ul>li>a span {
+  color: whitesmoke;
+}
+
+
+/* */
+
+.mMenu>nav.gnb>ul>li>ul.lnb {
+  display: none;
+  /* min-height: (100vh - 96px); */
+}
+
+
+.mMenu>.contact.on {
+  background-color: rgba(22, 20, 17);
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  display: block;
+}
+
+.mMenu nav.gnb,
+.mMenu ul.lnb,
+.mMenu nav.gnb ul,
+.mMenu {
+  -ms-overflow-style: none;
+}
+
+
+.mMenu::-webkit-scrollbar,
+.mMenu nav.gnb ul::-webkit-scrollbar,
+.mMenu nav.gnb::-webkit-scrollbar,
+.mMenu ul.lnb::-webkit-scrollbar {
+  display: none;
+}
+
+.mMenu nav.gnb>ul>li:nth-last-child(1)::before {
+  content: " ";
+  border-top: 1px solid var(--color-text);
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  top: -20px;
+}
+
+
+
+/**************** 세로폰 : page,contents공통  *****************/
+/**************** 세로폰 : page,contents공통  *****************/
+/**************** 세로폰 : page,contents공통  *****************/
+
+section.page,
+section.contents {
+  width: 100%;
+}
+section.contents {
+  padding-bottom: 50px;
+}
+
+section.page .innerBox,
+section.contents .innerBox {
+  padding: 0 16px;
+}
+
+
+/********************* 세로폰 : page *********************/
+/********************* 세로폰 : page *********************/
+/********************* 세로폰 : page *********************/
+
+section.page {
+  padding-bottom: 16px;
+}
+
+section.page .innerBox h3.title {
+  color: var(--color-primary);
+  display: none;
+}
+
+section.page .innerBox .desc.pc {
+  display: none;
+}
+
+section.page .innerBox .desc.m {
+  font-size: 20px;
+  color: #999;
+
+  font-weight: 300;
+  line-height: 24px;
+  word-break: break-all;
+}
+
+
+
+
+
+
+
+
+
+/********************* 세로폰 : contents공통 *********************/
+/********************* 세로폰 : contents공통 *********************/
+/********************* 세로폰 : contents공통 *********************/
+
+
+
+/******* 세로폰 : contents공통 : 탭 양식 ********/
+/******* 세로폰 : contents공통 : 탭 양식 ********/
+.tabs {
+  border-width: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+}
+
+
+.tabs.ui-widget.ui-widget-content {
+  /* border-width: 0; */
+}
+
+.tabs ul.tabs-nav {
+  margin: 0 -16px;
+  display: flex;
+  padding: 0 0 20px 0;
+  /* padding-bottom: 20px; */
+  height: 40px;
+  /* width: 100%; */
+
+}
+
+.tabs ul.tabs-nav li {
+  flex: 1 !important;
+  border: 1px solid #e6e3df;
+  border-left-width: 0;
+}
+
+.tabs ul.tabs-nav .ui-tab {
+  margin-right: 0;
+}
+
+.tabs ul.tabs-nav li:last-child {
+  border-right-width: 0px;
+}
+
+.tabs ul.tabs-nav li.ui-tabs-active {
+  border-bottom-width: 0;
+}
+
+
+.tabs ul.tabs-nav .ui-tabs-anchor {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+}
+
+.tabs ul.tabs-nav li:not(.ui-tabs-active) .ui-tabs-anchor {
+  font-weight: 300;
+}
+
+.tabs .ui-tabs-panel {
+  padding: 0;
+}
+
+
+
+
+/******* 태블릿 : contents공통 : 탭 양식 > 탭 하부 섹션 ********/
+/******* 태블릿 : contents공통 : 탭 양식 > 탭 하부 섹션 ********/
+.tabs .swiper.car {
+  margin-bottom: 16px;
+}
+
+.tabs section>.innerBox {
+  padding: 0 0 16px 0;
+}
+
+
+
+
+
+
+
+/******* 세로폰 : contents공통 : Swiper 캐러셀 양식 ********/
+/******* 세로폰 : contents공통 : Swiper 캐러셀 양식 ********/
+.swiper.car {
+  /* border: 1px solid red; */
+  /* height: 45vh; */
+}
+
+.swiper.car .swiper-wrapper {
+  aspect-ratio: 16/9;
+}
+
+.swiper.car .swiper-slide p.fullsize-img-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.swiper.car .swiper-slide p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper.car .swiper-controller {
+  position: relative;
+  /* border: 1px solid darkgreen; */
+  display: flex;
+  /* height: 40px; */
+
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  padding-top: 5px;
+}
+
+.swiper.car .swiper-pagination-bullet {
+  background-color: rgb(198, 198, 198);
+  opacity: 0.8;
+  transform: scale(0.9);
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 6px));
+  height: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 6px));
+}
+
+.swiper.car .swiper-controller .swiper-pagination {
+  position: relative;
+  /* border: 1px solid skyblue; */
+  top: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}
+
+.swiper-prev {
+  display: none;
+  /* border: 1px solid red; */
+
+}
+
+.swiper-next {
+  display: none;
+
+}
+
+/* .swiper-prev,
+.swiper-next{
+  display:block;
+} */
+
+/* 탭페이지 > 캐러셀 하단 설명부분 */
+.tabs-page .info .title {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 14px;
+  padding-bottom: 7px;
+}
+
+.tabs-page .info .desc,
+.tabs-page .info .subDesc {
+  font-size: 12px;
+  line-height: 16px;
+  padding-bottom: 13px;
+  font-weight: 400;
+}
+
+.tabs-page .info .subTitle {
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 7px;
+}
+
+.tabs-page .info .subTitle.facil {
+  display: none;
+}
+
+
+/******* 세로폰 : contents공통 : accoList : 아코디언양식(jquery ui) ********/
+/******* 세로폰 : contents공통 : accoList : 아코디언양식(jquery ui) ********/
+/* 페이지 : arttain-시설 */
+.ui-accordion {
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+}
+
+.ui-accordion h3.ui-accordion-header {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-color: #e7e3e0;
+  padding: 12px 8px 14px 0;
+  clear: both;
+
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ui-accordion h3.ui-accordion-header .ui-accordion-header-icon {
+  float: right;
+}
+
+.ui-accordion-header.ui-state-active,
+.ui-accordion-header.ui-state-hover,
+.ui-accordion-header.ui-state-default {
+  background-color: transparent;
+  color: #333;
+}
+
+span.ui-icon-custom-on {
+  height: 6px;
+  width: 9px;
+  background-image: url('../resource/img/icon_updown.png') !important;
+  background-size: 9px 12px;
+  position: relative;
+  top: 10px;
+}
+
+span.ui-icon-custom-off {
+  height: 6px;
+  width: 9px;
+  background-image: url('../resource/img/icon_updown.png') !important;
+  background-position-y: -6px;
+  background-size: 9px 12px;
+  position: relative;
+  top: 10px;
+}
+
+.ui-accordion-header.ui-corner-top,
+.ui-accordion-header.ui-corner-bottom {
+  border-radius: 0;
+}
+
+.ui-state-active .ui-icon,
+.ui-state-default .ui-icon {
+  background-image: url(../resource/lib/jquery-ui-p-city/images/ui-icons_9c836a_256x240.png);
+}
+
+ul.accoList .acco-body {
+  /* height: auto !important; */
+  padding: 16px 0 24px;
+  overflow: visible;
+}
+
+ul.accoList .acco-body .card-body {
+  padding: 2px 0 0;
+}
+
+ul.accoList .acco-body .card-body p.card-text {
+  padding-top: 11px;
+  font-size: 12px;
+  color: #666;
+  /* font-family:  'Noto Sans KR', sans-serif; */
+  /* font-weight: 300; */
+  line-height: 16px;
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+/******* 세로폰 : contents공통 : accoList : 카드 양식 (부트스트랩 copy) ********/
+/******* 세로폰 : contents공통 : accoList : 카드 양식 (부트스트랩 copy) ********/
+/* page : arttain-시설 */
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  /* border: 1px solid rgba(0, 0, 0, 0.125); */
+  /* border-radius: 0.25rem; */
+}
+
+/* .card>hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card>.list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+
+.card>.list-group:first-child {
+  border-top-width: 0;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card>.list-group:last-child {
+  border-bottom-width: 0;
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+} */
+
+.card>.card-header+.list-group,
+.card>.list-group+.card-footer {
+  border-top: 0;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  /* padding: 1.25rem; */
+}
+
+
+
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0;
+}
+
+
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* 기본값 변경 */
+.card-img,
+.card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* 기본값 변경 */
+.card-img,
+.card-img-bottom {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+.accoList .card-title {
+  margin-bottom: 0.75rem;
+  display: none;
+}
+
+.accoList .card img {
+  /* border: 1px solid blueviolet; */
+  /* height: 40vh; */
+  aspect-ratio: 16/9;
+  /* overflow-y: hidden; */
+  box-sizing: border-box;
+}
+
+
+
+/******************* 세로폰 : contents : hotel 객실 리스트 *******************/
+/******************* 세로폰 : contents : hotel 객실 리스트 *******************/
+/******************* 세로폰 : contents : hotel 객실 리스트 *******************/
+/* page : hotel-객실 */
+section.contents#hotel_room_list {
+  margin-top: 25px;
+}
+
+section.contents#hotel_room_list section.roomtype {
+  margin-bottom: 30px;
+}
+
+.roomtype .swiperBox {
+  /* height: 45vh; */
+  /* min-height: 400px; */
+  align-items: stretch;
+  flex-flow: row nowrap;
+}
+
+.roomtype-header h4.roomtype-title {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 17px;
+}
+
+.roomtype-header span.swiper-img-pagination {
+  font-weight: 300;
+  /* display: inline-block; */
+  padding-left: 5px;
+}
+
+.roomtype-header span.swiper-img-pagination span.swiper-pagination-current {
+  font-weight: 700;
+}
+
+.roomtype-header>p.desc {
+  display: none;
+}
+
+.roomtype span.btnText {
+  display: none;
+}
+
+.roomtype .swiper-controller,
+.roomtype .swiper-text-container {
+  display: none;
+}
+
+/* 호텔 오버뷰, 객실타입 img-wrapper */
+#hotel .swiper-img-wrapper,
+.roomtype .swiper-img-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.roomtype .swiper-slide {
+  width: 240px;
+  height: 300px;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.roomCard .img-wrap {
+  width: 100%;
+  height: 135px;
+}
+
+.roomCard .img-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roomCard .card-body {
+  padding: 0 12px;
+}
+
+.roomCard h5.card-title {
+  display: block;
+  color: #111;
+  font-weight: 700;
+  padding-top: 12px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.roomCard .card-body p.card-text {
+  padding-top: 7px;
+  line-height: 18px;
+  color: #666;
+  font-weight: normal;
+  height: auto;
+}
+
+.roomCard dl.roomDesc {
+  padding: 7px 0 12px;
+  line-height: 18px;
+}
+
+.roomCard dl.roomDesc dt {
+  display: none;
+}
+
+.roomCard dl.roomDesc dd:before {
+  content: "• ";
+}
+
+.roomCard .roomtype-desc {
+  display: none;
+}
+
+
+
+
+/********************* 세로폰 : overview *********************/
+/********************* 세로폰 : overview *********************/
+/********************* 세로폰 : overview *********************/
+
+section.overview {
+  text-transform: uppercase;
+}
+
+/*********** 세로폰 : overview : full-screen ***********/
+.full-screen {
+  position: relative;
+  /* width: 100%; */
+  /* border : 1px solid blue; */
+
+}
+
+/* overview : 이미지 컨테이너 위치 */
+.full-screen .mainview {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  aspect-ratio: 16/9;
+  /* height: 100%; */
+  object-fit: cover;
+  /* 이미지 비율을 유지하며 전체를 채움 */
+  /* transform: translate(-50%, -50%); */
+  background: #fff no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+
+/* overview : 페이지별 이미지 주소 */
+.full-screen #hotel-mainview {
+  background-image: url('../resource/img/hotel/overview/img_main_visual.jpg');
+}
+
+
+/* overview : 서브페이지 카테고리명 */
+.full-screen h2.category {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  vertical-align: baseline;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 10vw;
+  left: 16px;
+  text-shadow: 0px 0px 13px rgba(0, 0, 0, 0.4);
+}
+
+/* overview : 서브페이지 카테고리 설명 */
+.full-screen p.desc {
+  font-size: 12px;
+  line-height: 17.5px;
+  vertical-align: baseline;
+  color: #666;
+  position: relative;
+  font-weight: 300;
+  top: 100%;
+  padding: 13px 16px 0;
+}
+
+.full-screen p.desc span.br {
+  display: none;
+}
+
+/********************* 세로폰 : overview : hotel : 캐러셀 *********************/
+/********************* 세로폰 : overview : hotel : 캐러셀 *********************/
+#hotel.contents section.hotelOverviewCaro {
+  margin-top: 30px;
+}
+
+#hotel.contents .titleBox.m {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 17px;
+}
+#hotel.contents .titleBox.m h4.title{
+  font-size:14px;
+}
+
+#hotel.contents .titleBox.pc {
+  display: none;
+}
+#hotel.contents .swiper-img-container h5.card-title{
+  font-size: 12px;
+  font-weight:300;
+}
+
+/* 더보기 */
+#hotel.contents p.viewMore a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+#hotel.contents p.viewMore a::after {
+  content: "\e5cc";
+  font-family: "Material Icons";
+  vertical-align: text-bottom;
+}
+
+/* 캐러셀 박스 = horzCardCaro */
+#hotel.contents .swiperBox {
+  align-items: stretch;
+  flex-flow: row nowrap;
+}
+
+/* 이미지 캐러셀 */
+#hotel.contents .swiper-img-container {
+  display: flex;
+  margin: 0;
+}
+
+#hotel.contents .swiper-slide {
+  width: 240px;
+  /* height: 300px; */
+}
+
+#hotel.contents .img-wrap {
+  width: 100%;
+  height: 135px;
+}
+
+#hotel.contents .img-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 캐러셀 슬라이드 제목 */
+#hotel.contents .card-body {
+  padding-top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+#hotel.contents span.swiper-img-pagination {
+  visibility: hidden;
+}
+
+/* 텍스트 캐러셀 */
+#hotel.contents .swiper-text-container {
+  display: none;
+}
+
+#hotel.contents section.hotelOverviewCaro .swiper-pagination {
+  display: none;
+}
+
+/********************* 세로폰 : footer *********************/
+/********************* 세로폰 : footer *********************/
+/********************* 세로폰 : footer *********************/
+.footer * {
+  color: black;
+  box-sizing: border-box;
+  /* font-family: 'Noto Sans', sans-serif; */
+}
+
+.footer {
+  width: 100%;
+  color: black;
+  /* background-color: #21201e; */
+  /* padding-top: 50px; */
+}
+
+.footer .downside a {
+  text-decoration: underline;
+}
+
+
+.footer .innerBox {
+  margin: 0 20px;
+}
+
+/*** 폰 전용 ***/
+
+
+
+/*** footer > downside ***/
+.footer .downside .innerBox.pc {
+  display: none;
+}
+
+
+
+
+.awards .icr {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: url('../resource/img/icon_icr.svg') no-repeat center center/cover;
+
+}
+
+.footer .downside {
+  background: #161411;
+  font-weight: 500;
+}
+
+
+.footer .downside a {
+  text-decoration: underline;
+}
+
+.footer .downside .innerBox.mobile {
+  padding: 18px 0 20px;
+
+}
+
+.footer .downside .innerBox.mobile * {
+  /* color: var(--color-secondary); */
+  color: #7b7A7a;
+  font-size: 0.8rem;
+}
+
+.footer .downside .innerBox.mobile h4.company {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.footer .downside .innerBox.mobile p.contact {
+  margin-bottom: 0.8rem;
+}
+
+.footer .downside .innerBox.mobile p.copyright {
+  margin-bottom: 0.8rem;
+}
+
+
+.footer .downside .innerBox.mobile ul.fnb {
+  /* letter-spacing: -1px; */
+  font-weight: 300;
+}
+
+.footer .downside .innerBox.mobile ul.fnb li {
+  display: inline-block;
+}
+
+.footer .downside .innerBox.mobile ul.fnb li:not(:last-of-type)::after {
+  content: ".";
+  display: inline-block;
+  height: 8px;
+  width: 1px;
+  background-color: #333;
+  vertical-align: middle;
+  margin: 0 5px 0 7px;
+  color: transparent;
+}
+
+a.goToTop {
+  position: fixed;
+  display: block;
+  width: 36px;
+  height: 36px;
+  bottom: 20px;
+  right: 20px;
+  background: url('../resource/img/btn_pagetop.png') no-repeat center center/contain;
+  /* background-color: rgba(0,0,0,0.65); */
+  /* background-size: 25% 25%; */
+  text-indent: -9999px;
+  z-index: 99;
+}
+
+
+
+
+
+
+
+
+    /************** 태블릿 : 공통 : 문의하기 모달창 **************/
+    /************** 태블릿 : 공통 : 문의하기 모달창 **************/
+    /************** 태블릿 : 공통 : 문의하기 모달창 **************/
+
+
+    .contact_window.ui-dialog{
+      position: static;
+      padding: 0;
+      
+    }
+
+    .contact_window.ui-dialog .selectBox{
+      position: relative;
+      width: 100%;
+      height: 32px;
+    }
+
+
+  /* 모달창 헤더 */
+  .contact_window .ui-widget-header{
+      background: var(--color-secondary);
+      color:white;
+      font-weight: 500;
+      padding: 12px 24px;
+  }
+
+  .contact_window .ui-widget-header button{
+      background-color : transparent;
+      /* padding:10px; */
+      margin-right: 16px;
+      border-width: 0;
+  }
+
+  .contact_window .ui-widget-header button .ui-icon{
+      background: url("../resource/img/btn_pop_close.png") center no-repeat;
+      background-size: 80%;
+  }
+
+
+  /* 모달창 내용 */
+  .contact_body.ui-dialog-content{
+      padding: 24px;
+      font-size: 12px;
+      color: rgba(0,0,0,0.65);
+  }
+
+  .contact_body .form-group{
+      width: 100%;
+      border : 1px solid salmon;
+      margin-bottom: 12px;
+  }
+  
+  .contact_body .form-group label{
+      display: block;
+      font-size: 10px;
+      color: var(--color-secondary);
+      font-weight: 500;
+      margin-bottom: 5px;
+  }
+
+  .contact_body .form-group input{
+      width: 100%;
+  }
+
+  /* 모달창 select 스타일 */
+  .contact_body .selectWrapper{
+      box-sizing: border-box;
+      
+  }
+  .contact_body .selectWrapper h4{
+      margin-bottom: 5px !important;
+      color: var(--color-secondary);
+  }
+  .contact_body .selectWrapper .inputBox{
+      border : 1px solid rgb(230,227,223);
+      padding: 5px;
+      
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**  모바일 Vert END  **/
+
+
+
+
+
+
+
+
+
+
+
+/************세로폰:일부분만 적용할 스타일****************/
+/************세로폰:일부분만 적용할 스타일****************/
+/************세로폰:일부분만 적용할 스타일****************/
+@media screen and (max-width: 575px) and (min-aspect-ratio:768/1600) {
+  section.mainView {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+  }
+
+  /**** 텍스트 스와이퍼 스타일 ******/
+  section.mainView>.mvTxtContainer {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+  }
+
+  section.mainView>.mvTxtContainer .wrapper .slide .descBox {
+    top: 80px;
+    bottom: auto;
+    /* height: auto; */
+
+
+    position: relative;
+    /* bottom: 22%; */
+    /* margin: auto 5%; */
+
+  }
+
+  section.mainView>.mvTxtContainer .wrapper .slide .descBox h2 {
+    font-size: 1.8rem;
+  }
+
+  section.mainView>.mvTxtContainer .wrapper .slide .overview {
+    background-color: rgba(256, 256, 256, 0.12);
+    border: 1px solid white;
+    box-sizing: content-box;
+    height: 7%;
+    width: 23%;
+    position: relative;
+    left: 0;
+    top: 80px;
+    bottom: auto;
+    margin: 5% 5% auto;
+
+    /* position: absolute; */
+    /* left: 5%; */
+    /* top: 300px; */
+    /* position: relative; */
+
+  }
+
+
+}
+
+
+
+
+
+@media (max-width: 575px) {
+
+  /************세로폰:일부분:Featured Offers****************/
+  section.fo>.innerBox>.foContainer>.foWrapper .foSlide .img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 32 / 18;
+  }
+
+  section.fo>.innerBox>.foContainer>.foWrapper .foSlide .img>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  section.fo>.innerBox>.foContainer>.foWrapper .foSlide .img>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: top;
+  }
+}
+
+/**************************************/
+/**             모바일 Horz         **/
+/**************************************/
+@media (min-width: 576px) {
+  .full-screen h2.category {
+    font-size: 38px;
+    line-height: 44px;
+    left: 32px;
+  }
+
+  .full-screen p.desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+}
+
+/**  모바일 Horz END  **/
